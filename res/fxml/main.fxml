@@ -1,0 +1,43 @@
+<?import javafx.scene.layout.GridPane?>
+
+
+<GridPane styleClass="container" fx:id="containerLogin" stylesheets="/css/style.css" xmlns="http://javafx.com/javafx/8"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+    <VBox>
+        <Label fx:id="errorsLabel" styleClass="errorMsg"/>
+        <GridPane styleClass="grid-pane">
+
+            <Label text="Username: "
+                   GridPane.rowIndex="0"
+                   GridPane.columnIndex="0"/>
+
+            <TextField fx:id="usernameField"
+                       promptText="Fill your username"
+                       GridPane.rowIndex="0"
+                       GridPane.columnIndex="1"/>
+
+            <Label text="Password: "
+                   GridPane.rowIndex="1"
+                   GridPane.columnIndex="0"/>
+
+            <PasswordField fx:id="passwordField"
+                           promptText="fill your password"
+                           GridPane.rowIndex="1"
+                           GridPane.columnIndex="1"/>
+
+            <Button text="Sign In"
+                    onAction="#signBtn"
+                    GridPane.rowIndex="2"
+                    GridPane.columnSpan="2"
+                    GridPane.halignment="RIGHT"/>
+
+            <Button text="Register"
+                    onAction="#registerBtn"
+                    GridPane.rowIndex="2"
+                    GridPane.columnSpan="2"
+                    GridPane.halignment="LEFT"
+                    GridPane.columnIndex="1"/>
+
+        </GridPane>
+    </VBox>
+</GridPane>
